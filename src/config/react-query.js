@@ -10,7 +10,7 @@ export const queryClient = new QueryClient({
   queryCache: new QueryCache({
     onError: (error) => {
       if (error?.response?.status === 401) {
-        window.location.href = '/';
+        window.location.href = '/login';
       }
       if (error?.response?.data?.detail) {
         console.log(error?.response?.data?.detail);

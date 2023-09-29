@@ -1,12 +1,10 @@
 import { Col, Row } from 'antd';
 import { Container } from '@/styles/global';
-import IconLogo from '@/assets/logo.png';
-import { ImageWrap, RegisterWrapper } from './style';
+import { RegisterWrapper } from './style';
 import { Button } from '@/components/button';
 import { useLogin } from './useLogin';
 import { InputPassword } from '@/components/input-password';
 import { Spinner } from '@/components/spinner';
-import { PhoneInput } from '@/components/phone-input';
 import { Input } from '@/components/input'; 
 
 const Auth = () => {

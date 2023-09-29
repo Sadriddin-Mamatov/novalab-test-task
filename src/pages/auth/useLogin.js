@@ -2,11 +2,9 @@ import { useForm } from 'react-hook-form';
 import { useMutation } from '@tanstack/react-query';
 import { login, userlogin } from '@/shared/modules/login';
 import { useNavigate } from 'react-router-dom';
-import { notification } from 'antd';
 
 export const useLogin = () => {
   const navigate = useNavigate();
-  const [contextHolder] = notification.useNotification();
 
   const form = useForm();
 
@@ -49,6 +47,5 @@ export const useLogin = () => {
     onLogin,
     isLoading: registerMutate.isLoading,
     isLoginLoading: loginMutate.isLoading,
-    contextHolder,
   };
 };

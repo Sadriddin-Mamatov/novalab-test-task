@@ -24,7 +24,6 @@ export const useConfirm = () => {
     }
   })
 
-  console.log(events, 'events');
   const { mutate, isLoading } = useMutation(
     (data) => (id ? updateReservations(id, data) : CreateReservation(data)),
     {

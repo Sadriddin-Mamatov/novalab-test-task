@@ -19,7 +19,7 @@ export const useConfirm = () => {
       res?.data?.results?.map((v) => {
         return {
           value: v?.id,
-          label: v?.name_uz,
+          label: v?.name,
         };
       }),
   });
@@ -51,7 +51,6 @@ export const useConfirm = () => {
     }
   );
   const confirm = (data) => {
-    // console.log(data, 'data');
     const formData = new FormData();
     formData.append('name', data.name);
     formData.append('topic', data.topic);

@@ -8,10 +8,10 @@ export const HocPrivate = ({ children }) => {
   const { pathname } = useLocation();
 
   if (!user?.username) {
-    return <Navigate to={ROUTER.ADMIN + '/' + ROUTER.PRODUCTS}  />;
+    return <Navigate to={ROUTER.ADMIN + '/login' + ROUTER.EVENTS}  />;
   }
-  if (pathname === ROUTER.ADMIN || pathname === ROUTER.ADMIN + '/login') {
-    return <Navigate to={ROUTER.ADMIN + '/login' + ROUTER.PRODUCTS} />;
+  if (pathname === ROUTER.ADMIN || pathname === ROUTER.ADMIN + '/events') {
+    return <Navigate to={ROUTER.ADMIN + '/login' + ROUTER.EVENTS} />;
   }
 
   return <>{children}</>;
